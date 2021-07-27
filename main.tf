@@ -8,9 +8,11 @@ provider "aws" {
   secret_key                  = "mock_secret_key"
 }
 
+
+
 resource "aws_iam_account_password_policy" "strict" {
-  minimum_password_length = 8
-  #require_lowercase_characters   = true
+  minimum_password_length = 10
+  require_lowercase_characters   = true
   require_numbers                = true
   #require_uppercase_characters   = true
   #require_symbols                = true
